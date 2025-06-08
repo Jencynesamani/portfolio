@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mass Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      flex-direction: row;
+    }
+    aside.sidebar {
+      width: 250px;
+      background: linear-gradient(135deg, #6359ab, #f8b0f7);
+      color: white;
+      min-height: 100vh;
+      padding: 30px 20px;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+    aside .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    aside .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+    }
+    aside .profile h2 {
+      margin: 10px 0 0;
+      font-size: 20px;
+    }
+    nav.menu {
+      margin-top: 20px;
+    }
+    nav.menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      transition: 0.3s;
+    }
+    nav.menu a:hover {
+      transform: translateX(-5px);
+      color: #ffe87c;
+    }
+    main {
+      margin-left: 0%;
+      margin-right: 16%;
+      flex-grow: 2;
+    }
+    .section {
+      padding: 0px 20px;
+    }
+    .container {
+      margin-bottom: 20px;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .contact-info a {
+      color: #0077b5;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- <button onclick="downloadFile()">Download Resume</button>
+    <script>
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = "https://drive.google.com/file/d/1jNRfrqdJadxnl_KKbMYKuToZpDm_80qt/view?usp=sharing";
+      link.download = "";
+      link.click();
+    }
+    </script> -->
+    <div class="theme-toggle" onclick="toggleTheme()">🌓 </div>
+    <section id="intro" class="section" data-aos="fade-up">
+      <div class="container">
+        <h1>Hey, I'm <span>Jency nesamani J</span></h1>
+        <p>A passionate Developer crafting interactive digital experiences ✨</p>
+      </div>
+    </section>
+    <section id="about" class="section" data-aos="fade-right">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate IT student with a CGPA of 8.26, dedicated to crafting engaging and user-friendly digital experiences. I have hands-on experience with HTML, CSS, and SQL, and a strong interest in UI/UX design and Data Visualization.
+I enjoy turning ideas and data into clean, responsive, and visually appealing web interfaces and dashboards. Always eager to learn and grow, I strive to create impactful solutions that combine design and functionality.
+</p>
+        <!-- Resume Button in About Section -->
+        <!-- <a href="assets/resume.pdf" download target="_blank" style="
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;">
+            📄 Download Resume
+        </a> -->
+      </div>
+    </section>
+    <section id="skills" class="section" data-aos="zoom-in">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-box">
+          <span>HTML</span>
+          <div class="bar html"></div>
+        </div>
+        <div class="skill-box">
+          <span>CSS</span>
+          <div class="bar css"></div>
+        </div>
+        <div class="skill-box">
+          <span>JavaScript</span>
+          <div class="bar js"></div>
+        </div>
+        <div class="skill-box">
+          <span>Java</span>
+          <div class="bar java"></div>
+        </div>
+        <div class="skill-box">
+          <span>Python programming</span>
+          <div class="bar python"></div>
+        </div>
+        <div class="skill-box">
+          <span>C Language</span>
+          <div class="bar c"></div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section" data-aos="fade-left">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="card" data-aos="zoom-in-up">
+            <h3>Smart Traffic System</h3>
+            <p>IoT-based traffic control using RFID sensors.</p>
+          </div>
+          <div class="card" data-aos="zoom-in-up" data-aos-delay="100">
+            <h3>Interactive Portfolio</h3>
+            <p>Colorful, animated, and 100% unique – just like this one!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form data-aos="fade-up">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div class="contact-info" data-aos="fade-in">
+          <p>📞 Phone: +91 80724 86885</p>
+          <p>📧 Email: <a href="mailto:jencynesam@gmail.com">jencynesam@gmail.com</a></p>
+          <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/jency-nesamani-38b6b131a" target="_blank">https://www.linkedin.com/in/jency-nesamani-38b6b131a</a></p>
+          <p>🐙 GitHub: <a href="https://github.com/Jencynesamani" target="_blank">https://github.com/Jencynesamani</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="c:\Users\jearn\Downloads\IMG-20250607-WA0006.jpg" alt="Profile Photo">
+      <h2>Jency nesamani J</h2>
+    </div>
+    <nav class="menu">
+      <a href="#intro">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Resume Button in Sidebar -->
+    <a href="https://drive.google.com/file/d/1jNRfrqdJadxnl_KKbMYKuToZpDm_80qt/view?usp=sharing" download target="_blank" style="
+        display: block;
+        background-color: #ffe87c;
+        color: #333;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;">
+        📄 Download Resume
+    </a>
+
+  </aside>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+  <script src="src/script.js"></script>
+</body>
+</html>
+
